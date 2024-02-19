@@ -12,10 +12,11 @@ find_package(cryptopp)
 message("Building with CMake version: ${CMAKE_VERSION}")
 
 add_library(utils src/utils.h src/utils.cc)
+add_library(cc-md5 src/cc-md5.h src/cc-md5.cc)
 target_link_libraries(utils ZLIB::ZLIB gtest::gtest)
 
 add_executable(runme src/main.cc)
-target_link_libraries(runme utils)
+target_link_libraries(runme utils cc-md5)
 
 enable_testing()
 add_executable(
