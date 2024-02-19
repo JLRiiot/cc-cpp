@@ -1,5 +1,3 @@
-import os
-
 from conan import ConanFile
 from conan.tools.cmake import cmake_layout
 from conan.errors import ConanInvalidConfiguration
@@ -18,6 +16,6 @@ class CompressorRecipe(ConanFile):
     def layout(self):
         cmake_layout(self)
 
-    def validate(self):
-        if self.settings.os == "Macos" and self.settings.arch == "armv8":
-            raise ConanInvalidConfiguration("ARM v8 not supported in Macos")
+    # def validate(self):
+    #     if self.settings.os == "Macos" and self.settings.arch == "armv8":
+    #         raise ConanInvalidConfiguration("ARM v8 not supported in Macos")

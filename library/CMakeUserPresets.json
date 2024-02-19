@@ -1,9 +1,0 @@
-{
-    "version": 4,
-    "vendor": {
-        "conan": {}
-    },
-    "include": [
-        "/Users/josemontana/University/cpp/cc-cpp/library/build/Release/generators/CMakePresets.json"
-    ]
-}
