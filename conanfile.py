@@ -9,6 +9,7 @@ class CompressorRecipe(ConanFile):
     def requirements(self):
         self.requires("zlib/1.2.11")
         self.requires("gtest/1.14.0")
+        self.requires("cryptopp/8.9.0")
 
     def build_requirements(self):
         self.tool_requires("cmake/3.22.6")

@@ -7,6 +7,7 @@ SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(ZLIB)
 find_package(GTest)
+find_package(cryptopp)
 
 message("Building with CMake version: ${CMAKE_VERSION}")
 
@@ -20,8 +21,9 @@ enable_testing()
 add_executable(
   # Test suite
   tests
-  src/main_tests.cc
+  src/utils_tests.cc
 )
+target_link_libraries(tests utils)
 target_link_libraries(
   tests
   GTest::gtest_main
