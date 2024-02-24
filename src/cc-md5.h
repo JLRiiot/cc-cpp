@@ -9,6 +9,7 @@ class MD5
 {
 public:
   MD5();
+  void preprocess(std::vector<uint8_t> &message);
 
 private:
   static constexpr uint32_t initialA0 = 0x67452301;
