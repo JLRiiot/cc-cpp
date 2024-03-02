@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
-#include <zlib.h>
+#include <boost/log/trivial.hpp>
 
 #include "cc-md5.h"
 
@@ -13,10 +12,10 @@
 int main(void)
 {
   MD5 hasher = {};
-  auto message = "Amo-A0-Mi1-Familia2";
-  std::vector<uint8_t> messageBytes(message, message + strlen(message));
+  std::string message = "a";
 
-  hasher.preprocess(messageBytes);
+  std::string result = hasher.hash(message);
+  BOOST_LOG_TRIVIAL(debug) << "Hash of " << message << " is " << result;
 
   return EXIT_SUCCESS;
 }

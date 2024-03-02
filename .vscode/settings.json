@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "tuple": "cpp"
+    "tuple": "cpp",
+    "vector": "cpp"
   },
   "cmake.sourceDirectory": "/Users/josemontana/University/cpp/cc-cpp"
 }
