@@ -18,8 +18,14 @@ target_link_libraries(utils ZLIB::ZLIB gtest::gtest boost::boost)
 target_link_libraries(cc-md5 gtest::gtest boost::boost)
 
 add_executable(runme src/main.cc)
-target_link_libraries(runme utils cc-md5)
+target_link_libraries(runme cc-md5)
 
+# Coding challenge 1: https://codingchallenges.fyi/challenges/challenge-wc
+add_library(ccwc-lib src/ccwc.h src/ccwc.cc)
+add_executable(ccwc src/ccwc-main.cc)
+target_link_libraries(ccwc ccwc-lib)
+
+#tests configuration
 enable_testing()
 add_executable(
   # Test suite
