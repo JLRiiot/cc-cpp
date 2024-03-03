@@ -22,8 +22,9 @@ target_link_libraries(runme cc-md5)
 
 # Coding challenge 1: https://codingchallenges.fyi/challenges/challenge-wc
 add_library(ccwc-lib src/ccwc.h src/ccwc.cc)
+target_link_libraries(ccwc-lib gtest::gtest boost::boost)
 add_executable(ccwc src/ccwc-main.cc)
-target_link_libraries(ccwc ccwc-lib)
+target_link_libraries(ccwc ccwc-lib boost::boost)
 
 #tests configuration
 enable_testing()

@@ -3,7 +3,8 @@
     "tuple": "cpp",
     "vector": "cpp",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "map": "cpp"
   },
   "cmake.sourceDirectory": "/Users/josemontana/University/cpp/cc-cpp"
 }
