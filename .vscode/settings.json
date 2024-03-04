@@ -4,7 +4,10 @@
     "vector": "cpp",
     "iostream": "cpp",
     "ostream": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "iosfwd": "cpp",
+    "istream": "cpp",
+    "functional": "cpp"
   },
   "cmake.sourceDirectory": "/Users/josemontana/University/cpp/cc-cpp"
 }
